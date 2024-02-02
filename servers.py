@@ -79,3 +79,16 @@ def del_server(server_number):
             if counter != int(server_number):
                 f.write(line)
             counter += 1
+
+def do_command(client , given_command):
+    output=""
+    command = given_command
+    stdin, stdout, stderr = client.exec_command(command)
+    stdout = stdout.readlines()
+    for line in stdout:
+        output = output + line
+    if output != "":
+        print(output)
+    else:
+        print("There was no output for this command")
+    return output
