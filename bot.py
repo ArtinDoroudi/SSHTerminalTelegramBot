@@ -2,7 +2,7 @@ from telegram import Update, ReplyKeyboardMarkup, KeyboardButton, InputTextMessa
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, CallbackContext, ConversationHandler
 from time import gmtime, strftime
 from authentication import isAdminUser, add_admin_to_file
-from servers import get_servers_data, is_valid_ip, del_server, is_valid_login, add_server, client , do_command
+from servers import get_servers_data, is_valid_ip, del_server, is_valid_login, add_server, client , do_command, is_connected_to_server
 
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
