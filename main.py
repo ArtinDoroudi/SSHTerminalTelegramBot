@@ -25,5 +25,5 @@ if __name__ == '__main__':
     # Errors
     #app.error_handlers(error)
 
-    print("Polling...")
+    print("Starting...")
     app.run_polling(poll_interval=3)
